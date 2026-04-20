@@ -1,8 +1,91 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Thanh toán</h1>
-            <!-- Nội dung thanh toán -->
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Thanh Toán</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="/">Trang Chủ</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Thanh Toán</p>
         </div>
     </div>
 </div>
+<!-- Page Header End -->
+
+<!-- Checkout Start -->
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Thông Tin Giao Hàng</span></h5>
+            <form class="bg-light p-4" method="post">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label>Họ và Tên</label>
+                        <input class="form-control" type="text" placeholder="Nhập họ và tên" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="email" placeholder="Nhập email" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Số Điện Thoại</label>
+                        <input class="form-control" type="text" placeholder="Nhập số điện thoại" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Địa Chỉ</label>
+                        <input class="form-control" type="text" placeholder="Nhập địa chỉ" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Thành Phố</label>
+                        <input class="form-control" type="text" placeholder="Nhập thành phố" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Quốc Gia</label>
+                        <input class="form-control" type="text" placeholder="Nhập quốc gia" required>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label>Ghi Chú Đặt Hàng</label>
+                        <textarea class="form-control" rows="4" placeholder="Ghi chú..."></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Tóm Tắt Đơn Hàng</span></h5>
+            <div class="bg-light p-4 mb-4" border-bottom="1px solid #dee2e6">
+                <div class="d-flex justify-content-between mb-3">
+                    <p>Sản Phẩm</p>
+                    <p>100.000 đ</p>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <p>Vận Chuyển</p>
+                    <p>20.000 đ</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Thuế</p>
+                    <p>5.000 đ</p>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <p class="font-weight-bold">Tổng Cộng</p>
+                    <p class="font-weight-bold">125.000 đ</p>
+                </div>
+            </div>
+            <div class="bg-light p-4">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="payment1" checked>
+                    <label class="form-check-label" for="payment1">Direct Bank Transfer</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="payment2">
+                    <label class="form-check-label" for="payment2">Cheque Payment</label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="payment3">
+                    <label class="form-check-label" for="payment3">Paypal</label>
+                </div>
+                <button class="btn btn-block btn-primary font-weight-bold py-3">Đặt Hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Checkout End -->

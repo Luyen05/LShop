@@ -1,8 +1,88 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Chi tiết sản phẩm</h1>
-            <!-- Nội dung chi tiết sản phẩm -->
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Chi Tiết Sản Phẩm</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="/">Trang Chủ</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Chi Tiết</p>
         </div>
     </div>
 </div>
+<!-- Page Header End -->
+
+<!-- Shop Detail Start -->
+<div class="container-fluid py-5">
+    <div class="row px-xl-5">
+        {{#if product}}
+            <div class="col-lg-5 pb-5 product-carousel">
+                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner bg-light">
+                        <div class="carousel-item active p-5">
+                            {{#if product.image}}
+                                <img class="w-100 h-100" src="{{product.image}}" alt="{{product.name}}">
+                            {{else}}
+                                <div style="text-align: center; padding: 60px;">
+                                    <i class="fa fa-{{product.icon}} fa-5x text-muted"></i>
+                                </div>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 pb-5">
+                <h3 class="font-weight-semi-bold">{{product.name}}</h3>
+                <div class="d-flex mb-3">
+                    <div class="text-primary mr-2">
+                        {{#repeat product.rating}}<small class="fas fa-star"></small>{{/repeat}}
+                    </div>
+                    <small class="pt-1">({{product.reviews}} Đánh Giá)</small>
+                </div>
+                <h3 class="font-weight-semi-bold mb-4">{{formatPrice product.price}}</h3>
+                {{#if product.oldPrice}}<p class="text-muted"><s>{{formatPrice product.oldPrice}}</s></p>{{/if}}
+                <p class="mb-4">{{product.category}}</p>
+                <div class="d-flex align-items-center mb-4 pt-2">
+                    <div class="input-group quantity mr-3" style="width: 130px;">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-primary btn-minus" type="button">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1" readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-plus" type="button">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary px-3" type="button"><i class="fa fa-shopping-cart mr-1"></i> Thêm Vào Giỏ</button>
+                </div>
+                <div class="d-flex pt-2 border-top">
+                    <strong class="text-dark mr-2">Chia sẻ:</strong>
+                    <div class="d-inline-flex">
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-12">
+                <div class="alert alert-warning" role="alert">
+                    Sản phẩm không tồn tại
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>
+<!-- Shop Detail End -->

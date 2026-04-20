@@ -1,17 +1,92 @@
-<div class="container">
-    <div class="row">
-        {{#if sidebar}}
-            <div class="col-md-3">
-                {{>sidebar}}
-            </div>
-        {{/if}}
-        <div class="col-md-9">
-            <h1>Danh sách sản phẩm</h1>
-            <div class="row">
-                {{#each products}}
-                    {{>product-item}}
-                {{/each}}
-            </div>
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Cửa Hàng</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="/">Trang Chủ</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Cửa Hàng</p>
         </div>
     </div>
 </div>
+<!-- Page Header End -->
+
+<!-- Shop Start -->
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <!-- Shop Sidebar Start -->
+        <div class="col-lg-3 col-md-12">
+            <!-- Price Start -->
+            <div class="border-bottom mb-4 pb-4">
+                <h5 class="font-weight-semi-bold mb-4">Lọc Theo Giá</h5>
+                <form>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" checked id="price-all">
+                        <label class="custom-control-label" for="price-all">Tất Cả Giá</label>
+                        <span class="badge border font-weight-normal">200</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" id="price-1">
+                        <label class="custom-control-label" for="price-1">Dưới 5 Triệu</label>
+                        <span class="badge border font-weight-normal">45</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" id="price-2">
+                        <label class="custom-control-label" for="price-2">5 - 10 Triệu</label>
+                        <span class="badge border font-weight-normal">78</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" id="price-3">
+                        <label class="custom-control-label" for="price-3">10 - 20 Triệu</label>
+                        <span class="badge border font-weight-normal">56</span>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="price-4">
+                        <label class="custom-control-label" for="price-4">Trên 20 Triệu</label>
+                        <span class="badge border font-weight-normal">21</span>
+                    </div>
+                </form>
+            </div>
+            <!-- Price End -->
+        </div>
+        <!-- Shop Sidebar End -->
+
+        <!-- Shop Product Start -->
+        <div class="col-lg-9 col-md-12">
+            <div class="row pb-3 product-skeletons">
+                <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-media"></div>
+                        <div class="skeleton skeleton-line"></div>
+                        <div class="skeleton skeleton-line short"></div>
+                        <div class="skeleton skeleton-btn"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-media"></div>
+                        <div class="skeleton skeleton-line"></div>
+                        <div class="skeleton skeleton-line short"></div>
+                        <div class="skeleton skeleton-btn"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+                    <div class="skeleton-card">
+                        <div class="skeleton skeleton-media"></div>
+                        <div class="skeleton skeleton-line"></div>
+                        <div class="skeleton skeleton-line short"></div>
+                        <div class="skeleton skeleton-btn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pb-3 products-grid products-hidden">
+                {{#each products}}
+                    {{> product-item this}}
+                {{/each}}
+            </div>
+        </div>
+        <!-- Shop Product End -->
+    </div>
+</div>
+<!-- Shop End -->

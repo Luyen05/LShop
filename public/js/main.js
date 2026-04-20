@@ -82,6 +82,16 @@
             }
         }
     });
+
+    // Product list skeleton loading effect
+    $(window).on('load', function () {
+        if ($('.products-grid').length) {
+            setTimeout(function () {
+                $('.product-skeletons').addClass('d-none');
+                $('.products-grid').removeClass('products-hidden');
+            }, 450);
+        }
+    });
     
 })(jQuery);
 

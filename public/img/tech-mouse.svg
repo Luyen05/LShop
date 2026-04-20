@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Mouse illustration">
+  <rect width="640" height="480" fill="#f8fafc"/>
+  <rect x="240" y="90" width="160" height="290" rx="80" fill="#0f172a"/>
+  <rect x="258" y="108" width="124" height="254" rx="62" fill="#0ea5e9"/>
+  <rect x="307" y="122" width="26" height="54" rx="13" fill="#bae6fd"/>
+  <path d="M320 200v110" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
+</svg>
